@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <title>Cupom de Desconto</title>
+    <meta charset="utf-8"/>
+
+    <style>
+            .cupom{
+        border: 1px solid slateblue;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        width: 460px;
+        height: 75px;
+        text-align: center;
+    }
+    </style>
+
+
+</head>
+
+<h2>******** CUPOM DE DESCONTO ********</H2>
+
+    <body>
+        <div class="cupom">
+        <div id="quantidade"></div><br />
+        <div id="valor"></div>
+        </div>
+        <p>Desconto válido para uma compra até durar o estoque.</p>
+
+        <input type="button" value="Imprimir" onClick="window.print()"><br />
+        <p><a href="D:/Cursos/HTML/Projeto%201/Mega%20Promoção%20de%20Livros-P.5/Promoção%20de%20Livros-2.html">Voltar</a></p>
+    </body>
+
+        <script>
+            document.getElementById("quantidade").innerHTML = "-------- Este Cupom é válido para a compra de " + localStorage.getItem("A") + " Livros. --------";
+            document.getElementById("valor").innerHTML = "O valor total do seu desconto é R$ " + localStorage.getItem("B");
+        </script>
+
+</html>

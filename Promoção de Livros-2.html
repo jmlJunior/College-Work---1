@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Mega Promo&ccedil&atildeo de Livros</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body onload="limpFunction()">
+
+    <header>
+        <h2>MEGA PROMO&Ccedil&AtildeO DE LIVROS</h2>
+        <h5>Selecione no formul&aacuterio a quantidade de livros que voc&ecirc deseja comprar!</h5>
+        <h5>(Voc&ecirc receber&aacute um cupom de desconto gerado automaticamente pelo nosso sistema)</h5>
+        <h4>APROVEITE! E BOAS COMPRAS!</h4>
+    </header>
+
+    <section>
+
+        <nav>
+            <div>
+            Quantos livros você deseja comprar?<br/><br/>
+            <input type="text" id="Livros">
+            <p>Critério -A- de Desconto: (0,25 x Livros/quantidade) + 7,50</p>
+            <p>Critério -B- de Desconto: (0,50 x Livros/quantidade) + 2,50</p>
+            <p>Critério -C- de Desconto: (0,65 x Livros/quantidade) + 1,50</p>
+            <button type="button" onclick="document.getElementById('Livros')">VER DESCONTO</button><br /><br />
+            </div>
+
+            <p>A V I S O S !</p>
+            <div id="avisos" class="avisos">
+                <p id="conteudo"></p>
+            </div>
+            
+            <div class="impressao">
+            <p id="cupom"><a href="D:/Cursos/HTML/Projeto%201/Mega%20Promo%C3%A7%C3%A3o%20de%20Livros-P.5/Cupom%20de%20Desconto.html">Imprimir o Cupom de Desconto!</a></p>
+            </div>
+
+            <script language="javascript" src="Calc2.js"></script>
+        </nav>
+
+        <article>
+        </article>
+
+    </section>
+<footer>
+    <p>
+        <div id="data-hora"></div>
+    </p>
+        <time>
+            <script>
+            const zeroFill = n => {
+            return ('0' + n).slice(-2);
+            }
+            const interval = setInterval(() => {
+            const now = new Date();
+            const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+            document.getElementById('data-hora').innerHTML = dataHora;
+            }, 1000);
+            </script>
+        </time>
+        <p>
+            Criado por: J. Maurilio L. Junior &copy<br />
+            Data/Hora: 04-11-2021/ 18:30
+        </p>
+</footer>
+</body>
+</html>
